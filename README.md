@@ -32,6 +32,36 @@ app.post('/config/:appid', (req, res, next) => {
 })
 ```
 
+## mock for testing
+
+```js
+const {mock} = require('@xixilvie/jssdk')
+
+describe('suite', () => {
+  let unmock;
+  beforeAll(() => {
+    unmock = mock()
+  })
+  afterAll(() => {
+    unmock()
+  })
+
+  it('test', () => {
+    console.log('all http requests for wechat server will be mocked')
+  })
+})
+```
+
+mock data:
+
+```js
+// when fetch access_token from wechat's server, mock response will be:
+{access_token: 'access_token', expires_in: 7200}
+
+// when fetch ticket from wechat's server, mock response will be:
+{ticket: 'ticket', expires_in: 7200}
+```
+
 ## API
 
 ```ts
