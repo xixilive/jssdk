@@ -1,0 +1,37 @@
+{
+  "name": "@xixilive/jssdk",
+  "version": "0.0.1",
+  "description": "wechat's media platform jssdk utilities",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint lib __tests__",
+    "test": "yarn lint && jest --forceExit --detectOpenHandles"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/xixilive/jssdk.git"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.0",
+    "redis": "^3.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0",
+    "jest": "^26.0.1"
+  },
+  "keywords": [
+    "wechat",
+    "mp",
+    "jssdk"
+  ],
+  "author": "xixilive@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xixilive/jssdk/issues"
+  },
+  "homepage": "https://github.com/xixilive/jssdk#readme",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org"
+  }
+}
