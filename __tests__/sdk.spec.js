@@ -1,22 +1,7 @@
-const mockResponse = (data) => {
-  return {json: () => data}
-}
-
-jest.mock('node-fetch', () => {
-  return async (url) => {
-    if(url.indexOf('/token') >= 0) {
-      return mockResponse({access_token: 'access_token', expires_in: 7200})
-    }
-    if(url.indexOf('/ticket') >= 0) {
-      return mockResponse({ticket: 'ticket', expires_in: 7200})
-    }
-    throw new Error('unknown fetch resource')
-  }
-})
-
 const createSdk = require('../lib/sdk')
 const createCache = require('../lib/caches')
 const createStore = require('../lib/stores')
+const client = require('../lib/client')
 
 const memoCache = {}
 
@@ -33,7 +18,6 @@ const mockStore = {
 jest.mock('../lib/caches', () => jest.fn(() => mockCache))
 jest.mock('../lib/stores', () => jest.fn(() => mockStore))
 
-
 const config = {
   apps: [
     {key: 'key', secret: 'secret'}
@@ -48,7 +32,7 @@ config.getRealm = jest.fn(() => config.realms[0])
 
 describe('sdk', () => {
   const sdk = createSdk(config)
-
+  client.mock()
   afterAll(() => {
     expect(createStore).toHaveBeenCalledWith('memo', memoCache)
     expect(createCache).toHaveBeenCalledWith('memo', mockStore)

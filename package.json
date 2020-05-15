@@ -1,6 +1,6 @@
 {
   "name": "@xixilive/jssdk",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "wechat's media platform jssdk utilities",
   "main": "lib/index.js",
   "scripts": {
