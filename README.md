@@ -1,5 +1,11 @@
 # wechat's media platform jssdk utilities
 
+[![Travis](https://img.shields.io/travis/xixilive/jssdk/master)](https://travis-ci.org/github/xixilive/jssdk)
+[![npm bundle size](https://img.shields.io/bundlephobia/min/@xixilive/jssdk)](https://www.npmjs.com/package/@xixilive/jssdk)
+[![npm version](https://img.shields.io/npm/v/@xixilive/jssdk)](https://www.npmjs.com/package/@xixilive/jssdk)
+[![Known Vulnerabilities](https://snyk.io/test/github/xixilive/jssdk/badge.svg)](https://snyk.io/test/github/xixilive/jssdk)
+[![NPM license](https://img.shields.io/npm/l/@xixilive/jssdk)](https://www.npmjs.com/package/@xixilive/jssdk)
+
 ## Installation
 
 ```

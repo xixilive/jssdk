@@ -5,7 +5,8 @@
   "main": "lib/index.js",
   "scripts": {
     "lint": "eslint lib __tests__",
-    "test": "yarn lint && jest --forceExit --detectOpenHandles"
+    "test": "yarn lint && jest --forceExit --detectOpenHandles",
+    "prepublishOnly": "yarn test"
   },
   "repository": {
     "type": "git",
