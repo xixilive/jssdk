@@ -1,8 +1,9 @@
 {
-  "name": "@xixilive/jssdk",
-  "version": "0.0.2",
+  "name": "@ultramedia/jssdk",
+  "version": "0.1.0",
   "description": "wechat's media platform jssdk utilities",
   "main": "lib/index.js",
+  "types": "index.d.ts",
   "scripts": {
     "lint": "eslint lib __tests__",
     "test": "yarn lint && jest --forceExit --detectOpenHandles",

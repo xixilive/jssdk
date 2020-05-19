@@ -1,4 +1,4 @@
-const createSdk = require('../lib/sdk')
+const Sdk = require('../lib/sdk')
 const createCache = require('../lib/caches')
 const createStore = require('../lib/stores')
 const client = require('../lib/client')
@@ -31,7 +31,7 @@ config.getApp = jest.fn(() => config.apps[0])
 config.getRealm = jest.fn(() => config.realms[0])
 
 describe('sdk', () => {
-  const sdk = createSdk(config)
+  const sdk = Sdk(config)
   client.mock()
   afterAll(() => {
     expect(createStore).toHaveBeenCalledWith('memo', memoCache)
